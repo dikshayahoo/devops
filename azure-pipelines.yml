@@ -13,6 +13,15 @@ steps:
 - script: |
     echo This is build pipeline.
     echo it is working with file > file.txt
-    cp https://raw.githubusercontent.com/dikshayahoo/devops/master/src /tmp 
-     
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(Build.BinariesDirectory)'
+    includeRootFolder: true
+    archiveType: 'tar'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip' 
+    replaceExistingArchive: false
   displayName: 'Build Stage'
+
+  
+
+
