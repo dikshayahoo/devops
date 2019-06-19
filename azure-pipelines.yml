@@ -14,5 +14,5 @@ steps:
     echo This is build pipeline.
     echo it is working with file > file.txt
     cp https://raw.githubusercontent.com/dikshayahoo/devops/master/src /tmp 
-    gzip */temp/src 
+     
   displayName: 'Build Stage'
