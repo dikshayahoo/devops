@@ -14,6 +14,7 @@ steps:
     echo This is build pipeline.
     echo it is working with file > file.txt
     ls -la
+    pwd
   displayName: 'Build Stage'
 
   
