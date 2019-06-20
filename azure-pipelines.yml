@@ -13,13 +13,7 @@ steps:
 - script: |
     echo This is build pipeline.
     echo it is working with file > file.txt
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: '$(Build.BinariesDirectory)'
-    includeRootFolder: true
-    archiveType: 'tar'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip' 
-    replaceExistingArchive: false
+    ls -la
   displayName: 'Build Stage'
 
   
