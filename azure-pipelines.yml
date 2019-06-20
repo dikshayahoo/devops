@@ -15,8 +15,14 @@ steps:
     echo it is working with file > file.txt
     ls -la
     pwd
+    zip -r src.zip ./src
+    cp src.zip $(Build.ArtifactStagingDirectory)/.
   displayName: 'Build Stage'
-
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
   
 
 
