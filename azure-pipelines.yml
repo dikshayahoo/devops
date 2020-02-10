@@ -15,7 +15,6 @@ steps:
     zip -r src.zip ./src
     ls -la
     cp src.zip $(Build.ArtifactStagingDirectory)/.
-    ls -la
   displayName: 'Build Stage'
 - task: PublishBuildArtifacts@1
   inputs:
